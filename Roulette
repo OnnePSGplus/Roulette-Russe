@@ -1,8 +1,5 @@
-#!/bin/bash
-trap '' SIGINT
-
-passwd root 
-su -
+#!/bin/sh
+trap '' SIGINT TSTP
 
 echo "Bienvenue dans la Roulette Russe ! Vous savez, ces Russes sont tellement débrouillards qu'ils montent sur des ours comme s'ils étaient des chevaux. Chapeau bas pour l'inventivité !"
 
@@ -26,3 +23,5 @@ if [ $result -eq 1 ]; then
 else
     echo "T'es pas drole"
 fi
+
+### Pour lancer le script : chmod +x nomduscript.sh ./nomduscript.sh --no-preserve root
